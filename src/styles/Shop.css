@@ -1,0 +1,19 @@
+.shop {
+	background-color: #fbf7f6;
+	color: hsl(8, 24%, 7%);
+	padding: 20px;
+	padding-bottom: 80px;
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.shop h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #b36053;
+	margin-bottom: 20px;
+}

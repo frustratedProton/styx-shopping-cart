@@ -1,0 +1,32 @@
+.product-list {
+	padding: 20px;
+	background-color: #fbf7f6;
+	color: #150e0d;
+}
+
+.product-list h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	color: #b36053;
+	margin-bottom: 15px;
+}
+
+.product-list input[type='text'] {
+	border: 1px solid #dca9a1;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 400px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+
+.product-list p {
+	font-family: 'Merriweather', serif;
+	color: #150e0d;
+	line-height: 1.6;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
