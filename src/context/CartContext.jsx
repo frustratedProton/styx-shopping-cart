@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from 'react';
-import { fetchProducts } from '../api'
+import { fetchProducts } from '../api';
+import useLocalStorage from '../hooks/UseLocalStorage'; // Ensure the correct path
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useLocalStorage('cart', []);
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
@@ -16,6 +17,7 @@ export const CartProvider = ({ children }) => {
 
 		loadProducts();
 	}, []);
+
 	const addToCart = (product) => {
 		setCart((prevCart) => {
 			const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -43,7 +45,6 @@ export const CartProvider = ({ children }) => {
 
 	const clearCart = () => {
 		setCart([]);
-		localStorage.removeItem('cart');
 	};
 
 	const totalPrice = cart.reduce(
