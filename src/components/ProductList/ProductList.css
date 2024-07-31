@@ -57,14 +57,17 @@
   .product-list .filter-container {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .product-list input[type='text'] {
     margin-bottom: 0;
     max-width: 300px;
+    flex: 1;
   }
 
   .product-list select {
     margin-left: 20px;
+    flex-shrink: 0; 
   }
 }
