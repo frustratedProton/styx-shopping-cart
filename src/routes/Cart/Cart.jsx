@@ -6,10 +6,12 @@ import './Cart.css';
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, clearCart, totalPrice } = useContext(CartContext);
   const [checkedOut, setCheckedOut] = useState(false);
-  const [orderSummary, setorderSummary] = useState([]);
+  const [orderSummary, setOrderSummary] = useState([]);
+  const [orderTotalPrice, setOrderTotalPrice] = useState(0);
 
   const handleCheckout = () => {
-    setorderSummary(cart);
+    setOrderSummary(cart);
+    setOrderTotalPrice(totalPrice);
     setCheckedOut(true);
     clearCart();
   };
@@ -34,6 +36,7 @@ const Cart = () => {
                   <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
               ))}
+              <h3>Total Price: ${orderTotalPrice.toFixed(2)}</h3> 
             </div>
           )}
           <Link to="/shop" className="continue-shopping">
