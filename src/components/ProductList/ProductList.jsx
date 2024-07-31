@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
-import { CartContext } from '../context/CartContext';
-import ProductCard from './ProductCard';
-import '../styles/ProductList.css';
+import { CartContext } from '../../context/CartContext';
+import ProductCard from '../ProductCard/ProductCard';
+import './ProductList.css';
 
 const ProductList = () => {
   const { products, addToCart } = useContext(CartContext);

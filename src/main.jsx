@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
-import './styles/index.css';
+import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './components/Home.jsx';
-import Shop from './components/Shop.jsx';
-import Cart from './components/Cart.jsx';
+import Home from './routes/Home/Home.jsx';
+import Shop from './routes/Shop/Shop.jsx';
+import Cart from './routes/Cart/Cart.jsx';
 import { CartProvider } from './context/CartContext.jsx';
 
 const router = createBrowserRouter([

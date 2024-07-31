@@ -1,5 +1,5 @@
-import ProductList from './ProductList';
-import '../styles/Shop.css';
+import ProductList from '../../components/ProductList/ProductList';
+import './Shop.css';
 
 const Shop = () => {
   return (

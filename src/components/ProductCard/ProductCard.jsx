@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import '../styles/ProductCard.css';
+import './ProductCard.css';
 
 const ProductCard = ({ product, addToCart }) => {
   // console.log(product)
