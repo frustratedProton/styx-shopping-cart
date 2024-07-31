@@ -76,3 +76,10 @@
 .product-card button:hover {
   background-color: #d37e70;
 }
+
+@media (max-width: 600px) {
+  .rating-container {
+    justify-content: center;
+    margin-top: 1em;
+  }
+}

@@ -2,6 +2,9 @@
   padding: 20px;
   background-color: #fbf7f6;
   color: #150e0d;
+  max-width: 100%; 
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .product-list h2 {
@@ -51,6 +54,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  justify-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 600px) {

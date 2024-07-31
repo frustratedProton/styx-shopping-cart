@@ -9,6 +9,7 @@
   overflow-x: hidden;
   margin: 0 auto;
   box-sizing: border-box;
+  max-width: 1200px; 
 }
 
 .shop h1 {
