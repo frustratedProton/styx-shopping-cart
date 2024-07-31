@@ -4,13 +4,12 @@
   padding: 20px;
   padding-bottom: 80px;
   min-height: 100vh;
-  max-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0 auto;
   box-sizing: border-box;
-  max-width: 1200px; 
 }
+
 
 .shop h1 {
   font-family: 'Montserrat', sans-serif;

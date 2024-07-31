@@ -5,7 +5,9 @@
   max-width: 100%; 
   margin: 0 auto;
   box-sizing: border-box;
+  overflow: hidden; 
 }
+
 
 .product-list h2 {
   font-family: 'Montserrat', sans-serif;
