@@ -6,22 +6,48 @@ import '../styles/ProductList.css';
 const ProductList = () => {
   const { products, addToCart } = useContext(CartContext);
   const [search, setSearch] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const filterProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(search.toLowerCase())
-  );
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  const filterProducts = products.filter((product) => {
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === 'all' || product.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = [
+    ...new Set(products.map((product) => product.category)),
+    'all',
+  ];
 
   return (
     <div className="product-list">
-      <h2>Products</h2>
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <h2>Our Collection</h2>
+      <div className="filter-container">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <select value={selectedCategory} onChange={handleCategoryChange}>
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category === 'all' ? 'All Categories' : category}
+            </option>
+          ))}
+        </select>
+      </div>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="product-grid">
         {filterProducts.length === 0 ? (
           <p>No Products Found</p>
         ) : (

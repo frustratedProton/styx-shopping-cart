@@ -74,7 +74,10 @@ export const fetchProducts = async () => {
       id: product.id,
       name: product.title,
       price: product.price,
-      image: product.image
+      image: product.image,
+      rate: product.rating.rate,
+      count: product.rating.count,
+      category: product.category,
     }));
 
     return products;
