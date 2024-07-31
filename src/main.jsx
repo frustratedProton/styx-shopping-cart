@@ -7,11 +7,13 @@ import Home from './routes/Home/Home.jsx';
 import Shop from './routes/Shop/Shop.jsx';
 import Cart from './routes/Cart/Cart.jsx';
 import { CartProvider } from './context/CartContext.jsx';
+import ErrorPage from './routes/Error/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
