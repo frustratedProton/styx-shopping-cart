@@ -13,8 +13,7 @@
 
 .product-list .filter-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -23,10 +22,11 @@
   padding: 10px;
   border-radius: 5px;
   width: 100%;
-  max-width: 300px;
+  max-width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .product-list select {
@@ -37,7 +37,6 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
-  margin-left: 20px;
 }
 
 .product-list p {
@@ -52,4 +51,20 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .product-list .filter-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .product-list input[type='text'] {
+    margin-bottom: 0;
+    max-width: 300px;
+  }
+
+  .product-list select {
+    margin-left: 20px;
+  }
 }
