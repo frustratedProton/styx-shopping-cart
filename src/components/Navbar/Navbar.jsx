@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation">
       <div className="left-section">
         <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
           Home
@@ -28,6 +28,7 @@ const Navbar = () => {
         <Link
           to="/cart"
           className={location.pathname === '/cart' ? 'active' : ''}
+          data-testid="cart-link"
         >
           <div className="cart-icon">
             <span className="icon-wrapper">
